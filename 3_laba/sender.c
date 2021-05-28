@@ -5,7 +5,7 @@
 
 int main()
 {
-	const size_t memSize = sizeof(int) * 20;
+	const size_t memSize = 80;
 
 	int memId = shmget(IPC_PRIVATE, memSize, 0600 | IPC_CREAT | IPC_EXCL);
 
