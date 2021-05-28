@@ -24,7 +24,7 @@ int main()
 {
     srand(time(NULL));
 
-    int memId = shmget(IPC_PRIVATE, sizeof(int) * 20, 0600 | IPC_CREAT | IPC_EXCL);
+    int memId = shmget(IPC_PRIVATE, 80, 0600 | IPC_CREAT | IPC_EXCL);
 
     int *numbers = (int *)shmat(memId, 0, 0);
 
